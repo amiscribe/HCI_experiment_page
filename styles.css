@@ -1,0 +1,41 @@
+/*Tags*/
+*{
+    margin: 0.0px;
+    padding: 0.0px;
+}
+
+body{
+    background-image:url("images/weather.png");
+}
+
+p{
+   line-height: 200%;
+}
+
+/*Specific IDs*/
+#content{
+    width: 100%;
+}
+
+
+/*Classes*/
+.flex{
+    /*Establish flexbox properties*/
+    display:flex;
+    flex-direction:column;
+}
+
+.center{
+    justify-content:center;
+    align-items:center;
+}
+
+.text-box{
+    /*height*/    
+    width: 400px;
+    height: 20px;
+
+    /*formatting*/
+    background-color: #FFFFFF;
+    border: solid 1px black;
+}
