@@ -15,6 +15,8 @@ def outputCSV(filename, output):
     CSV_file.write(output)
     CSV_file.close()
 
+## Retrieve all pertinant info from 
+## the bundle of data we have recovered
 def storeTrialTimes( allTrials ):
     #variables
     allTrialsStr = ""
@@ -34,9 +36,12 @@ def storeTrialTimes( allTrials ):
         #input and given input 
         csvOut = "\"" + allTrials['data'][y]['errors']['cmpStr'] + "\"" + ","
         csvOut += "\"" + allTrials['data'][y]['errors']['input'] + "\"" + ","
-
+        
+        #assign for readability
         inDat = allTrials['data'][y]['inputData']
-
+        
+        #inner loop grabs all the characters and
+        #times for one trial forms strings for output
         for x in range(1, len(inDat)):
             inChars += inDat[x].get('letter', '\0').encode('utf-8') + ","
             csvOut = csvOut + (str(inDat[x]['time']) + ",")
@@ -48,11 +53,14 @@ def storeTrialTimes( allTrials ):
         csvOut += "," + str(avg) + "\n"
 
         #append to all trials
+        #for final cumulative output
         allTrialsStr += csvOut.encode('utf-8')        
     
+
         csvOut = inChars + csvOut.encode('utf-8')
         outputCSV(fileout, csvOut)
 
+        #reset values for next iter
         csvOut = ""
         inChars = ",,"
         acc = 0
@@ -60,8 +68,7 @@ def storeTrialTimes( allTrials ):
     ##Output all trials
     outputCSV(allTrialsFile, allTrialsStr)
 
-
-
+##Get info about errors from one trial
 def getErrors(errorData):
     #variables
     activeErr = 0
@@ -71,6 +78,9 @@ def getErrors(errorData):
     activeErr += (len(errorData['input']) - len(errorData['cmpStr']))
 
     return activeErr
+
+def getKeyStrokes(inputDat):
+    return (len(inputDat0))
 
 ##############################################
 #Main Driver##################################
@@ -90,7 +100,6 @@ JSON_file.close()
 ##convert JSON to python data structures
 anima_data = json.loads(JSON_string)
 subject = anima_data['subject']
-
 
 storeTrialTimes(anima_data)
 
