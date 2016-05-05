@@ -11,17 +11,38 @@
 
 <body>
     <div id="content" class="flex center">
-        <!--General Instructions-->
-        <p>Thank you for your participation in this survey etc.</p>
-        <br>
-        <!--Quick Brown Fox Phase-->
-        <p>Type in the phrase above the box as fast as you can.</p>
-
-        <p>The quick brown fox jumped over the lazy dog.</p>
-        <div class="text-box" contentEditable="true">Type Here</div>
-
+        <div id="instructions-box">
+          <!--General Instructions-->
+          <p>Thank you for your participation in this survey etc.</p>
+          <p>Type in the phrase above the box as fast as you can.</p>
+        </div>
+        
+        <div class="phrase-box">
+          <p>The quick brown fox jumped over the lazy dog.</p>
+          <div class="text-box" contentEditable="true">Type Here</div>
+        </div>
+        
+        <div class="phrase-box">
+          <p>The quick brown fox jumped over the lazy dog.</p>
+          <div class="text-box" contentEditable="true">Type Here</div>
+        </div>
+        
         <!--Main Testing Phase-->
     </div>
+    
+    <script>
+      var ndx;
+      function setUp(){
+          for(ndx = 0; ndx < 2; ndx++){
+            document.getElementsByClassName[ndx].onclick = function(event){
+                window.alert(event.target.nodeName); 
+            }
+          }
+      }
+    
+    document.onload = function(){setUp();}
+
+    </script>
 
     <script src="scripts.js"></script>
 </body>

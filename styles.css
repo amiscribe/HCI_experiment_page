@@ -12,9 +12,16 @@ p{
    line-height: 200%;
 }
 
+
+
+
 /*Specific IDs*/
 #content{
     width: 100%;
+}
+
+#instructions-box{
+    margin-bottom: 40px;
 }
 
 
@@ -31,11 +38,17 @@ p{
 }
 
 .text-box{
-    /*height*/    
+    /*size*/    
     width: 400px;
     height: 20px;
 
     /*formatting*/
     background-color: #FFFFFF;
     border: solid 1px black;
+}
+
+
+.phrase-box{
+    border:solid 1px black;
+
 }
