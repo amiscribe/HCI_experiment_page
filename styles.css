@@ -20,10 +20,9 @@ p{
     width: 100%;
 }
 
-#instructions-box{
-    margin-bottom: 40px;
+#instructions{
+    margin-bottom: 40.0px;
 }
-
 
 /*Classes*/
 .flex{
@@ -47,8 +46,7 @@ p{
     border: solid 1px black;
 }
 
-
-.phrase-box{
-    border:solid 1px black;
-
+.trial-box{
+    border: solid 1px black;
+    margin-bottom: 25px;
 }

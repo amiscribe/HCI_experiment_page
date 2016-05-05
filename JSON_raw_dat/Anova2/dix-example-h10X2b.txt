@@ -1,0 +1,14 @@
+DV: Completion Time (s)
+F1: Icon Type, Natural, Abstract
+F2: .
+F3: Group
+656,702,NA
+259,339,NA
+612,658,NA
+609,645,NA
+1049,1129,NA
+1135,1179,AN
+542,604,AN
+495,551,AN
+905,893,AN
+715,803,AN

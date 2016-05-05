@@ -11,22 +11,22 @@
 
 <body>
     <div id="content" class="flex center">
-        <div id="instructions-box">
-          <!--General Instructions-->
-          <p>Thank you for your participation in this survey etc.</p>
-          <p>Type in the phrase above the box as fast as you can.</p>
+        <div id="instructions">
+            <!--General Instructions-->
+            <p>Thank you for your participation in this survey etc.</p>
+            <p>Type in the phrase above the box as fast as you can.</p>
+            <div id="mobile-log"></div>
         </div>
         
-        <div class="phrase-box">
-          <p>The quick brown fox jumped over the lazy dog.</p>
-          <div class="text-box" contentEditable="true">Type Here</div>
+        <div class="trial-box flex center">
+            <p>The quick brown fox jumps over the lazy dog.</p>
+            <div class="text-box" contentEditable="true"></div>
         </div>
-        
-        <div class="phrase-box">
-          <p>The quick brown fox jumped over the lazy dog.</p>
-          <div class="text-box" contentEditable="true">Type Here</div>
+        <div class="trial-box flex center">
+            <p>The quick brown fox jumps over the lazy dog.</p>
+            <div class="text-box" contentEditable="true"></div>
         </div>
-        
+
         <!--Main Testing Phase-->
     </div>
     
@@ -44,7 +44,69 @@
 
     </script>
 
-    <script src="scripts.js"></script>
+    <script>
+        var totalLog = [];
+        var log = [];
+        var errorLog = [];
+        var errNInBundle = {}; 
+        var datum = {};
+        var trialResults = {};
+        
+        //loads all text boxes with property that enables them for
+        //active input reading
+        window.onload = function(){
+            var textBoxes = document.getElementsByClassName("text-box");
+            for(var ndx = 0; ndx < textBoxes.length; ndx++){
+                textBoxes[ndx].onclick = function(event){
+                    loadInput(event.target);
+                }
+            }
+        }
+        
+        //loads all input characters
+        //with timestamps into an array
+        function loadInput(elem){
+            var ndx = 0;
+            var errors = 0;
+            var d = new Date();
+            var start = d.getTime();
+
+            elem.onkeyup = function(elem){
+                //variables          
+                d = new Date();
+                var stop = d.getTime();
+                var time = stop - start;    
+                
+                //saving info to temporary 
+                datum.letter = elem.key;
+                datum.time = time;
+                log[ndx] = datum;
+                  
+                if(elem.key == "Backspace" || elem.key == "Delete"){
+                    errors += 1;
+                }
+                                
+
+                //make it so input is final
+                if(elem.key == "Enter"){
+                    elem.target.textContent = "Input Accepted";
+                    elem.target.contentEditable = false;
+                    
+                    //save and store data
+                }
+
+                document.getElementById("mobile-log").innerHTML = elem.key;                
+
+                //cleanup
+                ndx++;
+                start = d.getTime();
+            }
+        }
+
+        
+    </script>    
+
+    <!--<script src="scripts.js"></script>-->
 </body>
 
 </html>

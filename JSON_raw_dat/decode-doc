@@ -1,0 +1,15 @@
+Data Structure of Saved Data - In Python Terminology
+
+- Top  [Dictionary] - (Two Members)
+    + subject [String]
+    + data [List] - (All Trials of Experiment)
+        -@ Index i [Dictionary]
+            - inputData [List of Dictionaries]
+                + @ Index j [Dictionary]
+                    - letter [char]
+                    - time   [int]
+            - errors [Dictionary] - (Three Members)
+                + errors [int]
+                + input  [string]
+                + cmpStr [string]
+
