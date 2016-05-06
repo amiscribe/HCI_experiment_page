@@ -1,0 +1,18 @@
+"The quick brown fox jumps over the lazy dog.","The quick brown fox jumps over the lazy dog.",20,0,20
+"The quick brown fox jumps over the lazy dog.","The quick brown fox jumps over the lazy dog.",23,0,23
+"The quick brown fox jumps over the lazy dog.","Thd qulck brown fox jumps over the lazy dog.",0,2,2
+"The quick brown fox jumps over the lazy dog.","Thequick brown fox jumps over the lazy dog.",-1,41,40
+"The quick brown fox jumps over the lazy dog.","The quick Brown fox jumps over the lazy dog.  .",42,1,43
+"The quick brown fox jumps over the lazy dog.","The quick Brown dog jumps over the lazy fox.",40,5,45
+"With its blue skies and abundant life, planet Earth is a pretty special place.","With its blue skies and abundant life, planet earth is a pretty special place.",39,1,40
+"A salmon's sense of smell is thousands of times better than a dog's.","A Salmon's sense of smell is thousands of times better than a dog's.",33,1,34
+"When a book lover is in charge of the floor plan.","When a book lover is in charge of the floor plan.",26,0,26
+"The net cooling effect of a healthy tree is equal to 10 air conditioners operating 20 hours a day.","The net cooling effect of a healthy tree is equal to ten air conditioners operating tine hours a day.",64,44,108
+"With its blue skies and abundant life, planet Earth is a pretty special place.","With its bune skies and abundant life, puanet earth is a pretty special place.",0,4,4
+"A salmon's sense of smell is thousands of times better than a dog's.","Asalmon's sense of smell is thousands of times better than a dogs.",-2,65,63
+"When a book lover is in charge of the floor plan.","When a book lover is in charge of the floor plan.",0,0,0
+"The net cooling effect of a healthy tree is equal to 10 air conditioners operating 20 hours a day.","The net cooling offect of a healthy tree is equal to 10 air conditioners operating 20 hours a day8.",1,2,3
+"With its blue skies and abundant life, planet Earth is a pretty special place.","With its blue skies and abundant life,  planet earth is a pretty special place.  .",81,38,119
+"A salmon's sense of smell is thousands of times better than a dog's.","A Salmon's sense of smell is thousands of times better than a dog's.  .",62,1,63
+"When a book lover is in charge of the floor plan.","When a book lover is in charge of the floor plan .",47,1,48
+"The net cooling effect of a healthy tree is equal to 10 air conditioners operating 20 hours a day.","The net cooling effect of a health tree is equal to 1/ air conditioners operating 20 hours a day.",87,63,150

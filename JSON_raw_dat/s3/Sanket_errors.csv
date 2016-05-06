@@ -1,0 +1,25 @@
+"The quick brown fox jumps over the lazy dog.","Input Accepted.",13,43,56
+"The quick brown fox jumps over the lazy dog.","Input Accepted.",13,43,56
+"The quick brown fox jumps over the lazy dog.","The quick brown fox jumps over the lazy dog.",-17,0,-17
+"The quick brown fox jumps over the lazy dog.","The quick Brown fox jumps over the lazy. Dog.",43,6,49
+"The quick brown fox jumps over the lazy dog.","The quick Brown fox jumps over the last dog.",42,3,45
+"The quick brown fox jumps over the lazy dog.",".",-43,44,1
+"The quick brown fox jumps over the lazy dog.","The oooqulick brown fox jumps o-aver the lazy ooge.",-42,39,-3
+"The quick brown fox jumps over the lazy dog.","the qulck brown fox jurps over the lazy doge.",15,4,19
+"A salmon's sense of smell is thousands of times better than a dog's.","Input Accepted.",27,67,94
+"A salmon's sense of smell is thousands of times better than a dog's.","Input Accepted.",27,67,94
+"With its blue skies and abundant life, planet Earth is a pretty special place.","With its blue skies and abundant life, plant earth is a pretty special place..",-77,33,-44
+"When a book lover is in charge of the floor plan.","Input Accepted.",39,49,88
+"When a book lover is in charge of the floor plan.","Input Accepted.",39,49,88
+"The net cooling effect of a healthy tree is equal to 10 air conditioners operating 20 hours a day.","Input Accepted.",48,97,145
+"The net cooling effect of a healthy tree is equal to 10 air conditioners operating 20 hours a day.","Input Accepted.",48,97,145
+"With its blue skies and abundant life, planet Earth is a pretty special place.","With. It's blue skies and abundant life planet earth is a pretty special place.",78,73,151
+"A salmon's sense of smell is thousands of times better than a dog's.","Input Accepted.",-66,67,1
+"A salmon's sense of smell is thousands of times better than a dog's.","Input Accepted.",-66,67,1
+"When a book lover is in charge of the floor plan.","When. A book lover is in charge of the floor plan.",55,43,98
+"The net cooling effect of a healthy tree is equal to 10 air conditioners operating 20 hours a day.","The net cooling effect of a healthy tree is equal to 10 air conditioners operating 20 hours a day.",95,0,95
+"With its blue skies and abundant life, planet Earth is a pretty special place.","W. Th its blue skies and abunoent ni#e planet earth is a prettty special.",7,54,61
+"A salmon's sense of smell is thousands of times better than a dog's.","Input Accepted.",3,67,70
+"A salmon's sense of smell is thousands of times better than a dog's.","Input Accepted.",3,67,70
+"When a book lover is in charge of the floor plan.","When a booh lover is in char5e of floor plan.",-3,17,14
+"The net cooling effect of a healthy tree is equal to 10 air conditioners operating 20 hours a day.","The net coonino esfect of a healthy tree is equan to 10 air coNditioners opratingd.",-15,28,13

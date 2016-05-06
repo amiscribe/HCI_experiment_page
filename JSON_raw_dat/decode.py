@@ -21,12 +21,17 @@ def storeTrialTimes( allTrials ):
     #variables
     allTrialsStr = ""
     allTrialsFile = allTrials['subject'] + "_all_trials" + ".csv"
+    errorOutFile = allTrials['subject'] + "_errors" + ".csv"
+    keystrokeOutFile = allTrials['subject'] + "_keystrokes" + ".csv" 
     inChars = ",,"
     csvOut = ""
     fileout = ""
+    errOut = ""
+    keystrokeOut = ""
     acc = 0
     avg = 0
-    
+    errors = 0
+
     ###formats all but the first input
     ###for output & outputs
     for y in range(0, len(allTrials['data'])):
@@ -37,50 +42,71 @@ def storeTrialTimes( allTrials ):
         csvOut = "\"" + allTrials['data'][y]['errors']['cmpStr'] + "\"" + ","
         csvOut += "\"" + allTrials['data'][y]['errors']['input'] + "\"" + ","
         
+        errOut += "\"" + allTrials['data'][y]['errors']['cmpStr'] + "\"" + ","
+        errOut += "\"" + allTrials['data'][y]['errors']['input'] + "\"" + ","
+        
+        keystrokeOut += "\"" + allTrials['data'][y]['errors']['cmpStr'] + "\"" + ","
+        keystrokeOut += "\"" + allTrials['data'][y]['errors']['input'] + "\"" + ","
+        
         #assign for readability
         inDat = allTrials['data'][y]['inputData']
-        
+        errDat = allTrials['data'][y]['errors']
+
         #inner loop grabs all the characters and
         #times for one trial forms strings for output
         for x in range(1, len(inDat)):
             inChars += inDat[x].get('letter', '\0').encode('utf-8') + ","
             csvOut = csvOut + (str(inDat[x]['time']) + ",")
             acc += inDat[x]['time']
-    
+
+
         #compute average for given trial and append
         avg = acc/len(inDat)
         inChars += "\n"
         csvOut += "," + str(avg) + "\n"
 
+
+
+        #form error Data
+        errors = getErrors(allTrials['data'][y])
+        errOut += str(errors) + ","
+        errOut += str(errDat['errors']) + ","         #errors processed with a check of equality
+        errOut += str(errors + errDat['errors']) + "\n"
+
+        #form keystrokes data
+        keystrokeOut += str(getKeyStrokes(inDat)) + "\n"
+
+        #output errors and keystrokes
+        outputCSV(errorOutFile, errOut.encode('utf-8'))
+        outputCSV(keystrokeOutFile, keystrokeOut.encode('utf-8'))
+
+
         #append to all trials
         #for final cumulative output
-        allTrialsStr += csvOut.encode('utf-8')        
+#        allTrialsStr += csvOut.encode('utf-8')        
     
 
-        csvOut = inChars + csvOut.encode('utf-8')
-        outputCSV(fileout, csvOut)
+#        csvOut = inChars + csvOut.encode('utf-8')
+#        outputCSV(fileout, csvOut)
 
         #reset values for next iter
         csvOut = ""
         inChars = ",,"
+       # errOut = ""
+       # keystrokeOut = ""
         acc = 0
 
     ##Output all trials
-    outputCSV(allTrialsFile, allTrialsStr)
+#    outputCSV(allTrialsFile, allTrialsStr)
+    outputCSV(errorOutFile, errOut.encode('utf-8'))
+    outputCSV(keystrokeOutFile, keystrokeOut.encode('utf-8'))
 
 ##Get info about errors from one trial
-def getErrors(errorData):
-    #variables
-    activeErr = 0
-    
-    ##Evaluate errors as # of keystrokes greater than
-    ##min amout to complete task
-    activeErr += (len(errorData['input']) - len(errorData['cmpStr']))
-
-    return activeErr
+def getErrors(trialData):
+    return (len(trialData['inputData']) - len(trialData['errors']['cmpStr']))
 
 def getKeyStrokes(inputDat):
-    return (len(inputDat0))
+    return (len(inputDat))
 
 ##############################################
 #Main Driver##################################
