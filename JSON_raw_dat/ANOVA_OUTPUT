@@ -1,0 +1,39 @@
+> summary(aov.errors)
+
+Error: Subject
+          Df Sum Sq Mean Sq F value Pr(>F)
+Residuals  7  726.3   103.8               
+
+Error: Subject:Keyboard
+          Df Sum Sq Mean Sq F value  Pr(>F)   
+Keyboard   2 1429.1   714.5   11.14 0.00128 **
+Residuals 14  898.1    64.2                   
+---
+
+
+> summary(aov.speed)
+
+Error: Subject
+          Df Sum Sq Mean Sq F value Pr(>F)
+Residuals  7 531315   75902               
+
+Error: Subject:Keyboard
+          Df  Sum Sq Mean Sq F value   Pr(>F)    
+Keyboard   2 7312846 3656423   105.3 3.67e-09 ***
+Residuals 14  486318   34737                     
+---
+
+
+> summary(aov.speed)
+
+Error: Subject
+          Df Sum Sq Mean Sq F value Pr(>F)
+Residuals  7 531315   75902               
+
+Error: Subject:Keyboard
+          Df  Sum Sq Mean Sq F value   Pr(>F)    
+Keyboard   2 7312846 3656423   105.3 3.67e-09 ***
+Residuals 14  486318   34737                     
+---
+
+
